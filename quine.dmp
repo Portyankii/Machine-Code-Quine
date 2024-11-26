@@ -46,8 +46,8 @@ A2 00 C0 00 00 00 00 00 # 70 p_memsz: size in bytes of the segment in memory; p_
                              # INTENTION             INSTRUCTION         OPCODE             OFFSET          NOTE
 48 c7 c0 01 00 00 00         # mov 1 -> rax          mov rax, 1           c7                  7F
 48 c7 c7 01 00 00 00         # mov 1 -> rdi          mov rdi, 1           c7                  86
-48 c7 c6 78 00 40 00         # mov buf -> rsi        mov rsi, buf         c7                  8D
-48 c7 c2 2A 00 00 00         # mov 11 -> rdx         mov rdx, 11                              94 
+48 c7 c6 78 00 40 00         # mov program start -> rsi        mov rsi, buf         c7                  8D
+48 c7 c2 2A 00 00 00         # mov A2 -> rdx         mov rdx, 11                              94 
 0f 05                        # syscall               syscall              0F 05               96
 
 # exit
